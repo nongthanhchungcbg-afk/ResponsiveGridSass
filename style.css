@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 280px;
+  margin: 0;
+  color: #303030;
+  background: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.page {
+  position: relative;
+  min-height: 100vh;
+  padding: 8px;
+}
+
+.grid-overlay {
+  position: absolute;
+  z-index: 1;
+  inset: 8px 10px 0 8px;
+  opacity: 0.9;
+}
+
+.grid-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.grid-wrapper--header {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  height: 90px;
+}
+.grid-wrapper--content {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  height: 230px;
+}
+.grid-wrapper--footer {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  height: 50px;
+}
+.grid-wrapper--guide {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  height: 370px;
+}
+
+.grid-content {
+  min-width: 0;
+  height: 100%;
+  margin: 0;
+  border-right: 1px solid #b6b6b6;
+  background-color: #f1f1f1;
+}
+.grid-content.span-1 {
+  grid-column: span 1;
+}
+.grid-content.span-3 {
+  grid-column: span 3;
+}
+.grid-content.span-6 {
+  grid-column: span 6;
+}
+.grid-content.span-12 {
+  grid-column: span 12;
+}
+.grid-content--header {
+  border-right-color: transparent;
+  background-color: #9933cc;
+}
+.grid-content--sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  padding: 15px 10px 0;
+  border: 0;
+  background-color: #fff;
+}
+.grid-content--sidebar span {
+  flex: 0 0 15%;
+  border-radius: 2px;
+  background-color: #33b5e5;
+}
+.grid-content--main {
+  border: 0;
+  background-color: #fff;
+}
+.grid-content--aside {
+  height: auto;
+  padding: 15px 10px 0;
+  border: 0;
+  background-color: #fff;
+}
+.grid-content--aside::before {
+  display: block;
+  height: 92%;
+  border-radius: 2px;
+  background-color: #33b5e5;
+  content: "";
+}
+.grid-content--footer {
+  border-right-color: transparent;
+  background-color: #0099cc;
+}
+
+.grid-guide {
+  opacity: 0.1;
+}
+.grid-guide .grid-content {
+  border-right: 1px solid #161616;
+}
+.grid-guide .grid-content:first-child {
+  border-left: 1px solid #161616;
+}
+
+.page-note {
+  position: relative;
+  z-index: 2;
+  margin: 1rem 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 520px) {
+  .page {
+    padding: 6px;
+  }
+  .grid-overlay {
+    inset: 6px;
+  }
+  .grid-wrapper--header {
+    height: 64px;
+  }
+  .grid-wrapper--content {
+    height: 200px;
+  }
+  .grid-content--sidebar {
+    gap: 8px;
+    padding: 12px 6px 0;
+  }
+  .grid-content--aside {
+    padding: 12px 6px 0;
+  }
+  .page-note {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
+}

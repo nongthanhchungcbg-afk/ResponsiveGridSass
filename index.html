@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A responsive twelve-column grid refactored from CSS into Sass.">
+    <title>Responsive Grid | Sass Refactor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page">
+        <div class="grid-overlay" aria-label="Example twelve-column responsive page layout">
+            <div class="grid-wrapper grid-wrapper--header">
+                <div class="grid-content span-12 grid-content--header" aria-label="Page header"></div>
+            </div>
+
+            <div class="grid-wrapper grid-wrapper--content">
+                <section class="grid-content span-3 grid-content--sidebar" aria-label="Navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </section>
+                <div class="grid-content span-6 grid-content--main" aria-label="Main content"></div>
+                <aside class="grid-content span-3 grid-content--aside" aria-label="Sidebar"></aside>
+            </div>
+
+            <div class="grid-wrapper grid-wrapper--footer">
+                <div class="grid-content span-12 grid-content--footer" aria-label="Footer"></div>
+            </div>
+        </div>
+
+        <div class="grid-guide" aria-hidden="true">
+            <div class="grid-wrapper grid-wrapper--guide">
+                <span class="grid-content span-1"></span>
+                <span class="grid-content span-1"></span>
+                <span class="grid-content span-1"></span>
+                <span class="grid-content span-1"></span>
+                <span class="grid-content span-1"></span>
+                <span class="grid-content span-1"></span>
+                <span class="grid-content span-1"></span>
+                <span class="grid-content span-1"></span>
+                <span class="grid-content span-1"></span>
+                <span class="grid-content span-1"></span>
+                <span class="grid-content span-1"></span>
+                <span class="grid-content span-1"></span>
+            </div>
+        </div>
+
+        <p class="page-note">Resize the browser window to see how the twelve-column grid adjusts to the available space.</p>
+    </main>
+</body>
+</html>
